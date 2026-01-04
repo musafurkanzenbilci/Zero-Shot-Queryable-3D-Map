@@ -318,26 +318,32 @@ def test_visualizer():
 
     # from .data_loader import TUMDatasetLoader
     from data_loader import TUMDatasetLoader
-    from point_cloud import PointCloudGenerator
+    from point_cloud import PointCloudGenerator, SemanticPointCloud
 
-    # Load config
-    config_path = Path(__file__).parent.parent / "config" / "tum_freiburg3.yaml"
-    with open(config_path, 'r') as f:
-        config = yaml.safe_load(f)
-    
-    # Initialize loader
-    dataset_path = Path(__file__).parent.parent / "data" / "rgbd_dataset_freiburg3_long_office_household"
-    loader = TUMDatasetLoader(str(dataset_path), config)
-    
-    # Get a few frames
-    frames = loader.get_frames(skip=24, load_images=True) # start=0, end=10,  
-    print(f"\nLoaded {len(frames)} frames")
-    
-    # Initialize generator
-    generator = PointCloudGenerator(loader.intrinsics, config)
-    
-    # Generate point cloud
-    semantic_pc = generator.process_frames(frames, subsample=4, voxel_downsample=True)
+    pc_path = Path(__file__).parent.parent / "point_cloud.npz"
+
+    if pc_path.exists():
+        print("Using existing point cloud from ", pc_path)
+        semantic_pc = SemanticPointCloud.load(pc_path)
+    else:
+        # Load config
+        config_path = Path(__file__).parent.parent / "config" / "tum_freiburg3.yaml"
+        with open(config_path, 'r') as f:
+            config = yaml.safe_load(f)
+        
+        # Initialize loader
+        dataset_path = Path(__file__).parent.parent / "data" / "rgbd_dataset_freiburg3_long_office_household"
+        loader = TUMDatasetLoader(str(dataset_path), config)
+        
+        # Get a few frames
+        frames = loader.get_frames(skip=24, load_images=True) # start=0, end=10,  
+        print(f"\nLoaded {len(frames)} frames")
+        
+        # Initialize generator
+        generator = PointCloudGenerator(loader.intrinsics, config)
+        
+        # Generate point cloud
+        semantic_pc = generator.process_frames(frames, subsample=4, voxel_downsample=True)
     
     n_points = len(semantic_pc)
 
