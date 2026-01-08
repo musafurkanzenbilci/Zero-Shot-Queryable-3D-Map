@@ -237,6 +237,35 @@ class RerunVisualizer:
         
         print(f"  Logged similarity heatmap to '{entity_path}'")
     
+    def log_capsule(self, semantic_pc: SemanticPointCloud,
+                          centroids: np.ndarray,
+                          entity_path: str = "Query Result",
+                        ):
+        """
+        Visualize similarity scores as a heatmap on the point cloud.
+        
+        Args:
+            semantic_pc: Point cloud
+            similarities: Nx1 similarity scores
+            entity_path: Rerun entity path
+            point_size: Point size
+            colormap: Colormap name
+        """
+        self._ensure_initialized()
+        import rerun as rr
+
+        rr.log(
+            entity_path,
+            rr.Capsules3D(
+                lengths=[0.],
+                radii=[0.5],
+                translations=centroids
+            )
+        )
+
+        print(f"  Logged query result centroid to '{entity_path}'")
+    
+
     def log_camera_trajectory(self, poses: List[np.ndarray],
                               entity_path: str = "world/camera_trajectory",
                               color: Tuple[int, int, int] = (0, 255, 0)):
