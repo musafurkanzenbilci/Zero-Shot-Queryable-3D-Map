@@ -10,10 +10,8 @@ robotics and computer vision applications.
 
 import numpy as np
 from typing import Optional, List, Tuple
-from pathlib import Path
-import colorsys
 
-from point_cloud import SemanticPointCloud
+from src.point_cloud import SemanticPointCloud
 
 
 def similarity_to_color(similarities: np.ndarray, 
@@ -345,9 +343,8 @@ def test_visualizer():
     from pathlib import Path
     import yaml
 
-    # from .data_loader import TUMDatasetLoader
-    from data_loader import TUMDatasetLoader
-    from point_cloud import PointCloudGenerator, SemanticPointCloud
+    from src.data_loader import TUMDatasetLoader
+    from src.point_cloud import PointCloudGenerator, SemanticPointCloud
 
     pc_path = Path(__file__).parent.parent / "point_cloud.npz"
 

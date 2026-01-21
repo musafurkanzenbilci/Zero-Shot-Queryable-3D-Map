@@ -3,10 +3,10 @@ from typing import List, Optional, Dict, Tuple
 from dataclasses import dataclass
 from tqdm import tqdm
 
-from data_loader import Frame, CameraIntrinsics, TUMDatasetLoader
-from point_cloud import PointCloudFrame, SemanticPointCloud, PointCloudGenerator
-from segmentation import FastSAMSegmenter, FrameSegmentation
-from feature_extractor import CLIPFeatureExtractor, ImageFeatures
+from src.data_loader import Frame, CameraIntrinsics, TUMDatasetLoader
+from src.point_cloud import PointCloudFrame, SemanticPointCloud, PointCloudGenerator
+from src.segmentation import FastSAMSegmenter, FrameSegmentation
+from src.feature_extractor import CLIPFeatureExtractor, ImageFeatures
 
 """
 Pixel Fusion Module
@@ -360,7 +360,7 @@ def test_fusion():
         subsample=8
     )
 
-    from visualizer import RerunVisualizer
+    from src.visualizer import RerunVisualizer
 
     visualizer = RerunVisualizer(app_name="Test Visualization")
     # visualizer.log_point_cloud(semantic_pc, point_size=0.02)

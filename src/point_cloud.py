@@ -4,7 +4,7 @@ from typing import List, Optional, Tuple
 import numpy as np
 from tqdm import tqdm
 
-from data_loader import CameraIntrinsics, Frame
+from src.data_loader import CameraIntrinsics, Frame
 
 
 @dataclass
@@ -274,7 +274,7 @@ def test_point_cloud_generator():
     from pathlib import Path
     import yaml
 
-    from data_loader import TUMDatasetLoader
+    from src.data_loader import TUMDatasetLoader
 
     # Load config
     config_path = Path(__file__).parent.parent / "config" / "tum_freiburg3.yaml"

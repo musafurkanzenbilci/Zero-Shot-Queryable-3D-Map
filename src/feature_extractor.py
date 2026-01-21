@@ -371,7 +371,7 @@ def test_feature_extractor():
     # Show the segmentation of the most similar embedding on the image
     print("\nFinding segmentation mask most similar to query...")
 
-    from segmentation import FastSAMSegmenter
+    from src.segmentation import FastSAMSegmenter
 
     segmenter = FastSAMSegmenter(model_name="FastSAM-s")
     segmentation = segmenter.segment_frame(image)

@@ -628,7 +628,7 @@ def test_converter():
     
     # Test loading with TUMDatasetLoader
     print("\n4. Testing with TUMDatasetLoader...")
-    from data_loader import TUMDatasetLoader
+    from src.data_loader import TUMDatasetLoader
     loader = TUMDatasetLoader(str(output_dir))
     
     print(f"   Loader found {len(loader)} associated frames")

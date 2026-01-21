@@ -2,9 +2,9 @@ import numpy as np
 from typing import List, Optional, Tuple, Dict
 from dataclasses import dataclass
 
-from point_cloud import SemanticPointCloud
-from feature_extractor import CLIPFeatureExtractor
-from visualizer import RerunVisualizer
+from src.point_cloud import SemanticPointCloud
+from src.feature_extractor import CLIPFeatureExtractor
+from src.visualizer import RerunVisualizer
 
 
 @dataclass
@@ -403,9 +403,9 @@ def test_query_engine():
 
     from pathlib import Path
     import yaml
-    from data_loader import TUMDatasetLoader
-    from fusion import SemanticFusion
-    from segmentation import FastSAMSegmenter
+    from src.data_loader import TUMDatasetLoader
+    from src.fusion import SemanticFusion
+    from src.segmentation import FastSAMSegmenter
 
 
     # Initialize feature extractor
