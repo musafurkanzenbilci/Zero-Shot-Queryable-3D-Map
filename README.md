@@ -4,12 +4,9 @@ __Inspired by the [**ConceptFusion**](https://arxiv.org/abs/2302.07241) and [**C
 
 <!-- # th table of contents -->
 <p align="center">
-  <!-- <video src="keyboard_clean.mov" controls width="480">
-    Your browser does not support the video tag. <br>
-    <a href="keyboard_clean.mov">Download the demo video</a>
-  </video> -->
-
-  <img src="img/keyboard_clean.gif" controls width="640"></img>
+  <div align="center">
+    <img src="img/keyboard_clean.gif" width="640">
+  </div>
 </p>
 
 
