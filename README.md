@@ -60,6 +60,7 @@ __Apart from querying the objects directly, equal semantic queries also provide 
 - [x] Full Pipeline over a known dataset with specified camera intrinsics
 - [x] Compatible dataset creation from a video with specified camera intrinsics
 - [ ] Compatible dataset creation from a video with unspecified camera intrinsics(maybe using [this AnyCam paper](https://arxiv.org/pdf/2503.23282))
+- [ ] Full Pipeline working on a mobile app with no remote dependency by simply recording a video of an environment
 
 # Acknowledgments
 
