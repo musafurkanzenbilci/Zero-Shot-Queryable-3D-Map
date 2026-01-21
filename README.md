@@ -34,10 +34,27 @@ python3 pipeline.py --interactive --data <DATASET_ROOT>
   </video>
 </p> -->
 
-<!-- 
-# Dataset
 
-# Usage -->
+<!-- # Dataset -->
+
+# Usage
+__Apart from querying the objects directly, equal semantic queries also provide the expected results. In ConceptFusion, audio and image queries were also available but they are not implemented in here.__
+<table>
+  <tr>
+    <th>Object</th>
+    <th>Semantic Equal</th>
+  </tr>
+  <tr>
+    <td>Chair<img src="img/chair.png" alt="chair" width="640"></td>
+    <td>Sit<img src="img/sit.png" alt="sit" width="640"></td>
+  </tr>
+  <tr>
+    <td>Yellow Dice<img src="img/yellow_dice.png" alt="yellow dice" width="640"></td>
+    <td>Roll<img src="img/roll.png" alt="roll" width="640"></td>
+  </tr>
+</table>
+
+
 
 # Roadmap
 - [x] Full Pipeline over a known dataset with specified camera intrinsics
