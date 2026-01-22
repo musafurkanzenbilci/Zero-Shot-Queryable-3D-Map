@@ -25,7 +25,11 @@ Download the sequence __freiburg3_long_office_household__ from [TUM Dataset](htt
 python3 pipeline.py --interactive --data <DATASET_ROOT>
 ```
 
-<!-- ## Demo Video -->
+## Demo Video
+
+<!-- https://youtu.be/awIJe_8yHrY -->
+
+[![Demo Video](img/demo_youtube.png)](https://youtu.be/awIJe_8yHrY)
 
 <!-- <p align="center">
   <video src="demo.mov" controls width="640">
