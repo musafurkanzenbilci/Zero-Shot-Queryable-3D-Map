@@ -5,7 +5,7 @@ __Inspired by the [**ConceptFusion**](https://arxiv.org/abs/2302.07241) and [**C
 <!-- # th table of contents -->
 <p align="center">
   <div align="center">
-    <img src="img/keyboard_clean.gif" width="640">
+    <img src="img/optimized_keyboard_clean.gif" width="640">
   </div>
 </p>
 
